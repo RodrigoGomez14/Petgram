@@ -2,6 +2,9 @@ import styled, {css} from 'styled-components'
 import {appearsFromTop} from '../../styles/animation'
 export const List = styled.ul`
     display:flex;
+    &::-webkit-scrollbar {
+        display: none;
+    }
     overflow:scroll;
     width:100%;
     margin-bottom:10px;

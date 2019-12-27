@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 import {fadeIn} from '../../styles/animation'
 
 export const Article = styled.article`
@@ -14,7 +14,7 @@ export const ImgWrapper = styled.div`
     width: 100%
 `
 export const Img = styled.img`
-    ${fadeIn({time:'1s'})}
+    ${fadeIn({time:'2s'})}
     box-shadow: 0 10px 14px rgba(0,0,0,.2);
     height:100%;
     object-fit:cover;
@@ -29,5 +29,9 @@ export const Button = styled.button`
     align-items:center;
     & svg{
         margin-right:4px
+        ${props=>props.liked && css`
+            ${fadeIn()}
+            color:red
+        `}
     }
 `
